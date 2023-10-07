@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/WheatherGlance/static/css/main.073c9b0a.css",
-    "main.js": "/WheatherGlance/static/js/main.7f7475c1.js",
+    "main.css": "/WheatherGlance/static/css/main.f97e0ba4.css",
+    "main.js": "/WheatherGlance/static/js/main.924fbf92.js",
     "static/js/787.4211afa1.chunk.js": "/WheatherGlance/static/js/787.4211afa1.chunk.js",
-    "static/media/logo.svg": "/WheatherGlance/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/IMG_20210820_091858.jpg": "/WheatherGlance/static/media/IMG_20210820_091858.8e708257ce7b0df4d653.jpg",
+    "static/media/night.png": "/WheatherGlance/static/media/night.2c6436386dfa490d18b0.png",
+    "static/media/day.png": "/WheatherGlance/static/media/day.ed87612812d834606b61.png",
+    "static/media/moon.svg": "/WheatherGlance/static/media/moon.82fa0014d7062eea2d813018bbcefd85.svg",
     "index.html": "/WheatherGlance/index.html",
-    "main.073c9b0a.css.map": "/WheatherGlance/static/css/main.073c9b0a.css.map",
-    "main.7f7475c1.js.map": "/WheatherGlance/static/js/main.7f7475c1.js.map",
+    "main.f97e0ba4.css.map": "/WheatherGlance/static/css/main.f97e0ba4.css.map",
+    "main.924fbf92.js.map": "/WheatherGlance/static/js/main.924fbf92.js.map",
     "787.4211afa1.chunk.js.map": "/WheatherGlance/static/js/787.4211afa1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7f7475c1.js"
+    "static/css/main.f97e0ba4.css",
+    "static/js/main.924fbf92.js"
   ]
 }
