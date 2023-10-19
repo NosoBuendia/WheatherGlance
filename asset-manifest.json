@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WheatherGlance/static/css/main.f97e0ba4.css",
-    "main.js": "/WheatherGlance/static/js/main.924fbf92.js",
+    "main.js": "/WheatherGlance/static/js/main.09d986a9.js",
     "static/js/787.4211afa1.chunk.js": "/WheatherGlance/static/js/787.4211afa1.chunk.js",
     "static/media/IMG_20210820_091858.jpg": "/WheatherGlance/static/media/IMG_20210820_091858.8e708257ce7b0df4d653.jpg",
     "static/media/night.png": "/WheatherGlance/static/media/night.2c6436386dfa490d18b0.png",
@@ -9,11 +9,11 @@
     "static/media/moon.svg": "/WheatherGlance/static/media/moon.82fa0014d7062eea2d813018bbcefd85.svg",
     "index.html": "/WheatherGlance/index.html",
     "main.f97e0ba4.css.map": "/WheatherGlance/static/css/main.f97e0ba4.css.map",
-    "main.924fbf92.js.map": "/WheatherGlance/static/js/main.924fbf92.js.map",
+    "main.09d986a9.js.map": "/WheatherGlance/static/js/main.09d986a9.js.map",
     "787.4211afa1.chunk.js.map": "/WheatherGlance/static/js/787.4211afa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f97e0ba4.css",
-    "static/js/main.924fbf92.js"
+    "static/js/main.09d986a9.js"
   ]
 }
