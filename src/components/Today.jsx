@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
+
 const Block = styled.div`
 color:#FAFAFA;
 background-color: #22222F;
 
-min-height: 100%;
 border-radius: 5px;
 `
 const data = [
@@ -16,8 +16,7 @@ const data = [
     { hour: '12:00', temp: 24.2 },
     { hour: '15:00', temp: 22.4 },
     { hour: '18:00', temp: 20.1 },
-    { hour: '22:00', temp: 12.5 },
-];
+    { hour: '22:00', temp: 12.5 },];
 
 export default function Today() {
     return (

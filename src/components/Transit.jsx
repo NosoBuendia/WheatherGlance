@@ -3,6 +3,7 @@ import background from './IMG_20210820_091858.jpg';
 
 const Block = styled.div`
 background-color: white;
+max-height:100%; 
 `
 
 export default function Transit() {

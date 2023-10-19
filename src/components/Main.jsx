@@ -5,13 +5,11 @@ import moon from './weather_assets/moon.svg';
 
 const Block = styled.div`
 color:#FAFAFA;
-min-height: 100%;
 border-radius: 5px;
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+
 `
 const DialThermometer = styled.div`
 grid-area: 1 / 1 / 5 / 4;

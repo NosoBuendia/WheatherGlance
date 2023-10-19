@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 const Block = styled.div`
 color:#FAFAFA;
-min-height: 100%;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 8px;
-grid-row-gap: 8px;
+grid-column-gap: 1%;
+grid-row-gap: 1%;
 `
 const Div1 = styled.div`
  grid-area: 1 / 1 / 2 / 2;
@@ -41,24 +40,22 @@ const Div5 = styled.div`
 ` 
 const Div6 = styled.div`
  grid-area: 2 / 3 / 3 / 4;
- display: flex;
- align-items: center;
- justify-content: center; 
+ text-align: center;
  background-color: #22222F; 
  border-radius: 5px;
 ` 
-export default function Highlights({uvIndex, wind, sunriseTime, sunsetTime, humidity, visibility}) {
+export default function Highlights({apparentTemp, uvIndex, wind, sunriseTime, sunsetTime, humidity, visibility}) {
     return (
         <Block>
             <Div1>
-                <p>UV INDEX</p>
-
-                <p>{uvIndex}</p>
+            <p>APPARENT TEMPERATURE</p>
+                <p>{apparentTemp} °C</p>
             </Div1>
 
             <Div2>
-                <p>WIND STATUS</p>
-                <p>{wind} km/h</p>
+                <p>HUMIDITY</p>
+                <p>{humidity} %</p>
+                
             </Div2>
 
             <Div3>
@@ -68,8 +65,8 @@ export default function Highlights({uvIndex, wind, sunriseTime, sunsetTime, humi
             </Div3>
 
             <Div4>
-                <p>HUMIDITY</p>
-                <p>{humidity} %</p>
+                <p>WIND STATUS</p>
+                <p>{wind} km/h</p>
             </Div4>
 
             <Div5>
@@ -78,7 +75,8 @@ export default function Highlights({uvIndex, wind, sunriseTime, sunsetTime, humi
             </Div5>
 
             <Div6>
-                <p>AIR QUALITY</p>
+                <p>UV INDEX</p>                
+                <p>{uvIndex}</p>
             </Div6>
         </Block>
     );
