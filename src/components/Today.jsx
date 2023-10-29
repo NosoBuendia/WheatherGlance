@@ -5,7 +5,6 @@ import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 const Block = styled.div`
 color:#FAFAFA;
 background-color: #22222F;
-
 border-radius: 5px;
 `
 const data = [

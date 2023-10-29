@@ -12,6 +12,7 @@ grid-template-rows: 35% 15% 35%;
 grid-column-gap: 1%;
 grid-row-gap: 1%;
 margin: 1%;
+width: 50%;
 `
 
 export default function Weather() {

@@ -6,8 +6,8 @@ background-color: #22222F;
 display: flex;
 align-items: center;
 justify-content: center;
-min-height: 98%;
-margin: 1%;
+height: 98%;
+width: 98%;
 border-radius: 5px;
 `
 
