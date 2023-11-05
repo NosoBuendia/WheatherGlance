@@ -29,7 +29,7 @@ export default function NewTransit() {
         })
         .catch((error) => {
           console.error('Error al cargar los datos de la API:', error);
-          setIsLoading(false);
+          
         });
     };
 

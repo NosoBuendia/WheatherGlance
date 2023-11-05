@@ -7,12 +7,12 @@ import Loading from './Loading';
 import Axios from 'axios';
 
 const Block = styled.div`
-display: grid;
-grid-template-rows: 35% 15% 35%;
-grid-column-gap: 1%;
-grid-row-gap: 1%;
-margin: 1%;
-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 5px;
+    
 `
 
 export default function Weather() {
@@ -24,9 +24,10 @@ export default function Weather() {
     const [sunriseTime, setSunriseTime] = useState('');
     const [sunsetTime, setSunsetTime] = useState('');
     const [humidity, setHumidity] = useState('');
-    const [visibility, seVisibility] = useState('');    
+    const [visibility, seVisibility] = useState('');
     const [apparentTemp, setApparentTemp] = useState('');
-    const [isLoading, setIsLoading] = useState(true);    
+    const [wmoCode, setWmoCode ] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         Axios.get('https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,weathercode,windspeed_10m,winddirection_10m&hourly=temperature_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&timezone=America%2FSao_Paulo&forecast_days=1')
@@ -45,7 +46,8 @@ export default function Weather() {
                 setSunsetTime(apiData?.daily?.sunset[0]?.slice(11, 16));
                 setHumidity(apiData?.current?.relativehumidity_2m);
                 seVisibility(apiData?.hourly?.visibility[apiData?.hourly?.time?.indexOf(apiData?.current?.time?.slice(0, 13) + `:00`)]);
-                setApparentTemp(apiData?.current?.apparent_temperature);                
+                setApparentTemp(apiData?.current?.apparent_temperature);
+                setWmoCode(apiData?.current?.weathercode);
                 setIsLoading(false);
             })
             .catch((error) => {
@@ -56,13 +58,12 @@ export default function Weather() {
 
     return (
         <div>
-            {isLoading ? ( 
+            {isLoading ? (
                 <Loading />
             ) : (
-                <Block>                
-                     <Main main={main} isDay={isDay} />
-                     <Today /> {/**Este componente no quedo funcionando. como tampoco la imagen que cambia junto con el clima. A mejorar en la proxima entrega*/}
-                     <Highlights
+                <Block>
+                    <Main main={main} isDay={isDay} wmoCode={wmoCode} />                                                       
+                    <Highlights
                         apparentTemp={apparentTemp}
                         uvIndex={uvIndex}
                         wind={wind}
