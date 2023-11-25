@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Main from './Main';
 import Today from './Today';
 import Highlights from './Highlights';
+import WeatherSelect from './WeatherSelect';
 import Loading from './Loading';
 import Axios from 'axios';
 
@@ -11,8 +12,7 @@ const Block = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;    
-    border-radius: 5px;
-    
+    border-radius: 5px;    
 `
 
 export default function Weather() {
@@ -28,9 +28,9 @@ export default function Weather() {
     const [apparentTemp, setApparentTemp] = useState('');
     const [wmoCode, setWmoCode ] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-
+    
     useEffect(() => {
-        Axios.get('https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,weathercode,windspeed_10m,winddirection_10m&hourly=temperature_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&timezone=America%2FSao_Paulo&forecast_days=1')
+        Axios.get(`https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,weathercode,windspeed_10m,winddirection_10m&hourly=temperature_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&timezone=America%2FSao_Paulo&forecast_days=1`)
             .then((response) => {
                 const apiData = response.data;
                 setMain({
@@ -61,7 +61,7 @@ export default function Weather() {
             {isLoading ? (
                 <Loading />
             ) : (
-                <Block>
+                <Block>                   
                     <Main main={main} isDay={isDay} wmoCode={wmoCode} />                                                       
                     <Highlights
                         apparentTemp={apparentTemp}

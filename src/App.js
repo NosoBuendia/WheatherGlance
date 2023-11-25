@@ -1,6 +1,7 @@
 import './App.css';
 import Weather from './components/Weather';
 import Transit from './components/Transit';
+import Loading from './components/Loading';
 
 
 
@@ -11,7 +12,7 @@ function App() {
         <Weather />
       </div>
       <div className="half-screen">
-        <Transit />
+        <Loading />
       </div>
     </div>
   );

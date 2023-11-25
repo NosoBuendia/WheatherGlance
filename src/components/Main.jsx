@@ -13,7 +13,6 @@ import storm from './weather_assets/weatherType/Storm.svg';
 const Block = styled.div`
 color:#FAFAFA;
 border-radius: 5px;
-
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
